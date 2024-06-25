@@ -2,6 +2,7 @@
 layout: welcome # page
 title: Allen Zeng
 sitemap: true
+cover: true
 selected_projects:
   - _ucsd/ECE276A_PA3.md
   - _ucsd/ECE276C_Final_Research_Paper.md
