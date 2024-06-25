@@ -1,0 +1,244 @@
+---
+layout:      project  # Must be set to project
+date:        1 Jan 2016
+title:       Pinhole Camera
+caption:     Project caption displayed in grid view.
+image:
+  path:      /assets/thumb/berkeley@1619w.webp
+  srcset:
+    1619w:    /assets/thumb/berkeley@1619w.webp
+    960w:    /assets/thumb/berkeley@960w.webp
+    480w:    /assets/thumb/berkeley@480w.webp
+    240w:    /assets/thumb/berkeley@240w.webp
+description: >
+  This description is displayed on this project's page under the image.
+# links:
+#   - title:   Demo
+#     url:     /assets/pdf/pdf.pdf
+featured:    false
+sitemap:     true
+---
+
+<div class="container">
+    <div class="page-header" id="Introduction">
+        <h1>CS194-26 | Pinhole Camera<br>
+        <small>Allen Zeng, CS194-26-aec</small><br>
+        </h1>
+        <h2>Building the Pinhole Camera</h2>
+        <img src="/assets/webp/cs194-26/2/build/design.webp" class="img-responsive center-block" width=""></a>
+        <p>
+            The goal of this project is to design a good pinhole camera and to capture images using it.
+        </p>
+        <p>
+            When designing the pinhole camera, I had three goals in mind. First, the projected image should be in focus. Second, I wanted to be able to swap pinhole sizes easily and modularly. And third, I wanted to be able to mount my smartphone and use its digital camera for recording the projected image.
+        </p>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th class="col-sm-8"></th>
+                <th class="col-sm-4"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    Keeping the first goal in mind, I used the following formula in constructing the camera:
+                    <a href="/assets/webp/cs194-26/2/https://en.wikipedia.org/wiki/Pinhole_camera#Selection_of_pinhole_size">$$d=1.9\sqrt{f\lambda}$$</a>
+                    Where $d$ is the pinhole diameter, $f$ is the focal length (distance from hole to screen), and $\lambda$ is the wavelength of light. The formula describes the optimal parameters for obtaining crisp pinhole images.
+                    <br><br>
+                    I wanted to be able to create consistently sized pinholes, so I used standard mechanical pencil leads as pins. I had 0.3mm, 0.5mm, and 0.7mm pencil lead on hand. So I chose $d=$0.5mm as my optimal pinhole size.
+                    <br><br>
+                    It is advised to capture yellow-green light, at $\lambda=$550nm.
+                    <br><br>
+                    With the other two parameters in place, I solved for the optimal focal length and got $f\approx $12.6cm.
+                    <br><br>
+                    So, I found a cardboard box with a depth of about 13cm depth and padded the backpane with some tape. I then lined the back side with white printer paper to make the screen, and lined the side panels with black construction paper to prevent extraneous light from reflecting on to the screen. I chose a matte, heavy, and thick construction paper to absorb as much unwanted light as possible.
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/build/1.webp">
+                    <img src="/assets/webp/cs194-26/2/build/1.webp" class="img-responsive center-block" width=""></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <p>
+                    After lining the insides of the box, I lined two cardboard panels with black paper. With the black side pointing inward, I taped the two panels on to the front of the box to create a slit.
+                </p>
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/build/2.webp">
+                    <img src="/assets/webp/cs194-26/2/build/2.webp" class="img-responsive center-block" width=""></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <p>
+                    Now with the third goal in mind, I designed a mount for my smartphone camera. There is a small hole for the camera and the rest of the mount obscures part of the slit. My phone fits snugly into the mount, so no unwanted light gets through into the box and pictures can be consistently taken. The mount also features the ability to see the phone screen to configure the camera, and preview images taken.
+                </p>
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/build/3.webp">
+                    <img src="/assets/webp/cs194-26/2/build/3.webp" class="img-responsive center-block" width=""></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <p>
+                    With the second goal in mind, I designed a similar "mount" for the pinholes. The middle of the box features a pocket with a square hole cut out. The slide cards with the pinholes can easily be inserted into the pocket and swapped out. This means I don't have to tape or retape components of the box every time I need to change pinholes or configure the camera.
+                    <br>
+                    The rest of the slit is covered with black paper and taped over.
+                    <br><br>
+                    Pictured is the completed pinhole camera. The three pinhole slides are on the left, with sizes of 0.3mm, 0.5mm, and 0.7mm. The slide pocket is in the center. The focal length of the box is approximately 12.6cm. The smartphone mount is on the right.
+                </p>
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/build/4.webp">
+                    <img src="/assets/webp/cs194-26/2/build/4.webp" class="img-responsive center-block" width=""></a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Imaging Method</h2><table class="table table-striped">
+            <thead>
+            <tr>
+                <th class="col-sm-6"></th>
+                <th class="col-sm-2"></th>
+                <th class="col-sm-2"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    For taking all of the following images, I used my smartphone's digital camera, which features a <a href="/assets/webp/cs194-26/2/http://www.sony-semicon.co.jp/products_en/IS/sensor1/products/imx298.html">Sony IMX298</a> sensor. Most notably, the sensor allows has "an electronic shutter with variable integration time." This allows for real exposure timings, rather than simulating exposure timing through averaging.
+                    <br><br>
+                    When taking the images, I used manual settings to adjust ISO, exposure time, and focus. For the comparison photos, I used:
+                    <br><strong>ISO 1600,</strong>
+                    <br><strong>20/15/15 second exposures respectively, and</strong>
+                    <br><strong>focus adjusted to about 12cm away (to match the focal length of the pinhole).</strong>
+                    <br><br>
+                    For the non-comparison photos, I used the 12cm focus, but adjusted ISO and exposure time as needed to produce better lit photos.
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/phone.webp">Phone Model: OnePlus 3
+                    <img src="/assets/webp/cs194-26/2/phone.webp class="img-responsive center-block" width=""></a>
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/camera.webp">IMX298
+                    <img src="/assets/webp/cs194-26/2/camera.webp class="img-responsive" width=""></a>
+                    (ifixit.com, fair use)
+                </td>
+            </tr>
+        </table>
+
+        <h2>Images, Comparing Pinhole Sizes</h2>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th class="col-sm-3"></th>
+                <th class="col-sm-3">0.3mm</th>
+                <th class="col-sm-3">0.5mm (Optimal diameter)</th>
+                <th class="col-sm-3">0.7mm</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <strong>View of North Berkeley</strong>
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/set1/3dmm2.webp">
+                    <img src="/assets/webp/cs194-26/2/set1/3dmm2.webp" class="img-responsive center-block" width=""></a>
+                    A little blurry and dark.<br>
+                    The smaller pinhole here meant less light was going into the box. So to compensate, I used 20 seconds instead of 15 seconds for exposure. The resulting image is more blurry than for 0.5mm.
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/set1/5dmm2.webp">
+                    <img src="/assets/webp/cs194-26/2/set1/5dmm2.webp" class="img-responsive center-block" width=""></a>
+                    Least blurry.
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/set1/7dmm2.webp">
+                    <img src="/assets/webp/cs194-26/2/set1/7dmm2.webp" class="img-responsive center-block" width=""></a>
+                    A little blurry and bright.<br>
+                    The larger pinhole here meant more light was going into the box. I used the same settings as for 0.5mm, so the image appears brighter here. Because additional light is coming into the box, the image is blurrier as well.
+                </td>
+            </tr>
+            </tbody>
+            <tr>
+                <td>
+                    <strong>Inside Library</strong>
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/set2/3dmm2.webp">
+                    <img src="/assets/webp/cs194-26/2/set2/3dmm2.webp" class="img-responsive center-block" width=""></a>
+                    A little blurry.<br>
+                    Same as for the image above, I increased the exposure time to 20 seconds. The image is blurrier than for 0.5mm.
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/set2/5dmm2.webp">
+                    <img src="/assets/webp/cs194-26/2/set2/5dmm2.webp" class="img-responsive center-block" width=""></a>
+                    Least blurry.
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/set2/7dmm2.webp">
+                    <img src="/assets/webp/cs194-26/2/set2/7dmm2.webp" class="img-responsive center-block" width=""></a>
+                    A little blurry and bright.<br>
+                    Again, more light means a brighter image. And the large pinhole also means this image is more blurry than the 0.5mm image.
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <h2>Additional Images at 0.5mm Diameter</h2>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th class="col-sm-6"></th>
+                <th class="col-sm-6"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><a href="/assets/webp/cs194-26/2/set3/ex1.webp"><strong>Desk</strong>
+                    <img src="/assets/webp/cs194-26/2/set3/ex1.webp" class="img-responsive center-block" width=""></a>
+                    This was taken at night with two different bright light sources.
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/set3/ex2.webp"><strong>UC Berkeley Botanical Garden</strong>
+                    <img src="/assets/webp/cs194-26/2/set3/ex2.webp" class="img-responsive center-block" width=""></a>
+                </td>
+            </tr>
+            </tbody>
+            <tr>
+                <td><a href="/assets/webp/cs194-26/2/set3/ex3.webp"><strong>Dim Sum</strong>
+                    <img src="/assets/webp/cs194-26/2/set3/ex3.webp" class="img-responsive center-block" width=""></a>
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/set3/ex4.webp"><strong>Cat</strong>
+                    <img src="/assets/webp/cs194-26/2/set3/ex4.webp" class="img-responsive center-block" width=""></a>
+                    The cat was just hanging out, and didn't mind posing for a picture.
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <h2>Going Further: Light Painting <small>(Extra Credit)</small></h2>
+        <p>
+            I used a bright bicycle light, 400 ISO, and 30 second exposure to draw the pictures. The bicycle light acted like a point light source, and was brighter than all of the background light. Due to the lower ISO and long exposure, the light became like a paint brush on the pinhole camera canvas.
+        </p>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th class="col-sm-6"></th>
+                <th class="col-sm-6"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><a href="/assets/webp/cs194-26/2/set4/m_allen.webp"><strong>Name</strong>
+                    <img src="/assets/webp/cs194-26/2/set4/m_allen.webp" class="img-responsive center-block" width=""></a>
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/set4/m_happyface.webp"><strong>Happy Face</strong>
+                    <img src="/assets/webp/cs194-26/2/set4/m_happyface.webp" class="img-responsive center-block" width=""></a>
+                </td>
+            </tr>
+            </tbody>
+            <tr>
+                <td><a href="/assets/webp/cs194-26/2/set4/m_okface.webp"><strong>OK Face</strong>
+                    <img src="/assets/webp/cs194-26/2/set4/m_okface.webp" class="img-responsive center-block" width=""></a>
+                </td>
+                <td><a href="/assets/webp/cs194-26/2/set4/m_umbrella.webp"><strong>Umbrella</strong>
+                    <img src="/assets/webp/cs194-26/2/set4/m_umbrella.webp" class="img-responsive center-block" width=""></a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

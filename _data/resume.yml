@@ -1,0 +1,234 @@
+# If you have a `resume.json` file, copy it into `_data` and delete this file.
+# If you don't have a JSON Resume you can just edit this YAML file instead.
+# See also: <https://jsonresume.org/>.
+basics:
+  name: "Allen Zeng"
+  label: "Senior AL/ML Software Engineer"
+  picture: /assets/webp/presentation.webp
+  email: "allenzeng@berkeley.edu"
+  phone: "(661) 317-0068"
+  website: "https://allenjzeng.github.io"
+  summary: <object data="/assets/pdf/AllenZengResume.pdf" width="100%" height="400" type="application/pdf"></object>
+  # summary: >
+  #   Allen received his B.S. (2017) degree in _Electrical Engineering and
+  #   Computer Science_ from the University of California, Berkeley, and his M.S.
+  #   (2022) in _Electrical and Computer Engineering_ from the University of
+  #   California, San Diego (UCSD). His graduate studies focused on the topics of
+  #   _Intelligent Systems, Robotics, and Control_. Specifically, he has
+  #   applied deep learning computer vision techniques in support of autonomous
+  #   vehicles, and UAV-and satellite-based image processing. From his
+  #   undergraduate studies, he also has extensive experience with deep learning,
+  #   machine learning, image processing, and 3D surface reconstruction.
+  # location:
+  #   address: "address"
+  #   postalCode: "CA 99999"
+  #   city: "city"
+  #   countryCode: "US"
+  #   region: "California"
+  profiles:
+    - network: "LinkedIn"
+      username: "Allen Zeng"
+      url: "https://www.linkedin.com/in/zealng/"
+    # - network: "Resume, 1 page"
+    #   username: "Allen Zeng"
+    #   url: "/assets/pdf/AllenZengResume.pdf"
+
+work:
+  - company: "Toyon Research Corporation"
+    position: "Senior AL/ML Software Engineer" #, Algorithms & Applied Research,"
+    # website: "https://website.com"
+    startDate: "2018-01-01"
+    endDate: ""
+    summary: >
+      Currently working on very exciting research and implementing software solutions at the intersection of computer vision and deep learning!
+    highlights:
+      - For more information, please see the <a href="/work/">Professional Experience</a> section or my 1-Page Resume.
+
+  - company: "WellMind"
+    position: "Cofounder" #, Software,"
+    # website: "https://website.com"
+    startDate: "2021-09-01"
+    endDate: "2022-06-01"
+    summary: >
+      WellMind is a personalized behavioral solution for mild-to-moderate depression and anxiety, founded between UCSD Neural Engineering and Translation Labs (NEATLabs) and Rady MBA students.
+      It uses an explainable ML pipeline that identifies the primary behavioral variables which influence a user's mood, enabling the creation of targeted and personalized interventions.
+    highlights:
+      - For more information, please see the <a href="/presentations/WellMindOnePager/">One Pager for WellMind</a>.
+      - Awarded 1st Overall and 1st in Social Impact at StartR Demo Day (solo pitch), out of 21 teams. 1st in Audience Choice and 2nd Most Promising Venture at Rady Lab-to-Market Incubator Final Pitch, out of 30 teams.
+      - Raised $10K in pre-seed from competitions and grants, not including private funding.
+      - Conducted 20+ half-hour customer interviews and surveys with 185+ participants, to achieve product-market fit.
+
+  - company: "Northrop Grumman"
+    position: "Full Stack Software Engineering Intern"
+    # website: "https://website.com"
+    startDate: "2017-05-01"
+    endDate: "2017-12-01"
+    summary: >
+      Developed and integrated software components on the Airborne Signal Intelligence Payload.
+    highlights:
+      - Wrote efficient message routing software that runs as a service on Linux system startup, modified fixed-length 64KB messages to be variable length, averaging <1kB.
+      - Followed the component through development, integration, system testing, and physical flight testing.
+      - Wrote frontend GUI using JavaScript, HTML, and CSS, and updated Java backend to support the GUI.
+
+  - company: "UC Berkeley"
+    position: "Assistant Instructor & Tutor"
+    # website: "https://website.com"
+    startDate: "2016-01-01"
+    endDate: "2016-12-01"
+    # summary: >
+    #   Summary.
+    highlights:
+      - "Assistant Instructor for 'CS61C: Great Ideas in Computer Architecture (Machine Structures).'"
+      - "Tutor and Reader for 'EE16A: Designing Information Devices and Systems.'"
+      - "Tutor and Reader for 'CS70: Discrete Mathematics and Probability Theory.'"
+
+education:
+  - institution: "University of California, San Diego"
+    area: "Electrical and Computer Engineering"
+    specialization: "Intelligent Systems, Robotics, and Control"
+    studyType: "Master's"
+    startDate: "2020-09-01"
+    endDate: "2022-06-01"
+    gpa: "3.9"
+    courses:
+      - "CSE 250A - Principals of AI"
+      - "CSE 251B - Deep Learning"
+      - "CSE 257 - Search and Optimization"
+      - "ECE 150 - Entrepreneurship for Engineers"
+      - "ECE 269 - Linear Algebra"
+      - "ECE 271A - Statistical Learning I"
+      - "ECE 272A - Stochastic Process in Dynamic Systems I"
+      - "ECE 276A - Sensing & Estimation in Robotics"
+      - "ECE 276B - Planning & Learning in Robotics"
+      - "ECE 276C - Robot Reinforcement Learning"
+      - "ECE 285 - Autonomous Driving"
+      - "MGT 412 - Lab to Market"
+      - "MGT 413 - Operations, Information Systems, & Data Analysis"
+      - "MGT 414A - Lab to Market Workshop I"
+      - "MGT 414B - Lab to Market Workshop II"
+      - "MGT 444 - Managing Healthcare and Life Sciences"
+      - "MGT 450 - Project Managment"
+      - "MGT 489 - Digital Disruption and Transformation"
+
+  - institution: "University of California, Berkeley"
+    area: "Electrical Engineering and Computer Science"
+    studyType: "Bachelor's"
+    startDate: "2014-08-01"
+    endDate: "2017-12-01"
+    gpa: "3.9"
+    courses:
+      - "CS9A - Matlab for Programmers"
+      - "CS9E - Productive Use of the UNIX Environment"
+      - "CS61A - Structure and Interpretation of Computer Programs"
+      - "CS61B - Data Structures"
+      - "CS61C - Great Ideas of Computer Architecture (Machine Structures)"
+      - "CS70 - Discrete Mathematics and Probability Theory"
+      - "CS170 - Efficient Algorithms and Intractable Problems"
+      - "CS184/284A - Computer Graphics and Imaging"
+      - "CS186 - Introduction to Database Systems"
+      - "CS188 - Introduction to Artificial Intelligence"
+      - "CS189/289A - Introduction to Machine Learning"
+      - "CS194-26 - Image Manipulation and Computational Photograph"
+      - "EE16A - Designing Information Devices and Systems I"
+      - "EE16B - Designing Information Devices and Systems II"
+      - "EE120 - Signals and Systems"
+      - "EE126 - Probability and Random Processes"
+      - "EE127 - Optimization Models in Engineering"
+      - "EECS151 - Introduction to Digital Design and Integrated Circuits"
+      - "EECS151LB - FPGA Lab"
+# awards:
+#   - title: "title"
+#     date: "2000-01-01"
+#     awarder: "awarder"
+#     summary: "summary"
+volunteer:
+  - organization: "IEEE Eta Kappa Nu (HKN) Honor Society"
+    position: "Mentor"
+    # website: "ucsd.edu"
+    startDate: "2021-09-01"
+    endDate: "2022-06-01"
+    # summary: "Summary."
+    highlights:
+      - Mentored 2 graduate data science engineers.
+  - organization: "UCSD Jacobs Undergraduate Mentoring Program (JUMP)"
+    position: "Mentor"
+    # website: "ucsd.edu"
+    startDate: "2020-09-01"
+    endDate: "2022-09-01"
+    # summary: "Global movement of free coding clubs for young people."
+    highlights:
+      - Mentored 6 undergraduate engineers.
+      - Hosted resume, interview, and NumPy/PyTorch workshops for all members.
+  - organization: "UCSD Rady School of Management"
+    position: "MicroMBA Program Volunteer"
+    # website: "ucsd.edu"
+    startDate: "2021-04-01"
+    endDate: "2021-08-01"
+    # summary: "Summary."
+    highlights:
+      - Arranged and hosted coffee chats with executives and engineers from Apple, Qualcomm, SkySafe, and Kelzal for over 50 cross-disciplinary students.
+# publications:
+#   - name: ""
+#     publisher: ""
+#     releaseDate: "2000-01-01"
+#     website: ""
+#     summary: ""
+skills:
+  - name: "Libraries & Tools"
+    # level: "Master"
+    keywords:
+      - "PyTorch"
+      - "Numpy"
+      - "Matplotlib"
+      - "OpenCV"
+      - "Git"
+      - "Docker"
+      - "MMDetection"
+      - "MMCV"
+  - name: "Languages"
+    # level: "Master"
+    keywords:
+      - "Python"
+      - "C++"
+      - "C"
+      - "MATLAB"
+      - "Bash"
+  - name: "Technologies"
+    # level: "Master"
+    keywords:
+      - "Artificial Intelligence (AI)"
+      - "Machine Learning (ML)"
+      - "Deep Learning"
+      - "Computer Vision"
+      - "Convolutional Neural Networks (CNN)"
+      - "Vision Transformers (ViT)"
+      - "Multi-Camera Calibration"
+      - "Simultaneous Localization And Mapping (SLAM)"
+      - "Visual Inertial Odometry (VIO)"
+      - "Augmented Reality (AR)"
+      - "Virtual Reality (VR)"
+      - "Mixed Reality (MR)"
+      - "Extended Reality (XR)"
+      - "Reinforcement Learning (RL)"
+      - "Deep Reinforcement Learning"
+      - "Search and Recommendation Systems"
+# languages:
+#   - language: "English"
+#     fluency: "Native speaker"
+#   - language: "Cantonese"
+#     fluency: "Native speaker"
+#   - language: "German"
+#     fluency: "Beginner"
+#   - language: "Spanish"
+#     fluency: "Beginner"
+  # - language: "French"
+  #   fluency: "Beginner"
+# interests:
+#   - name: "Wildlife"
+#     keywords:
+#       - "Cats"
+#       - "Dogs"
+# references:
+#   - name: "name"
+#     reference: >
+#       Statement.
