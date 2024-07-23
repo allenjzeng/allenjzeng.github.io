@@ -21,12 +21,12 @@ featured:    false
 sitemap:     true
 ---
 
-Project RoboCar
+Final Presentation
 : [PDF](/assets/pdf/ucsd/ECE276C_Final_Presentation.pdf){:.no-push-state}
 
 <object data="/assets/pdf/ucsd/ECE276C_Final_Presentation.pdf" width="100%" height="1000" type="application/pdf"></object>
 
-Project RoboCar
+Final Paper
 : [PDF](/assets/pdf/ucsd/ECE276C_Final_Research_Paper.pdf){:.no-push-state}
 
 <object data="/assets/pdf/ucsd/ECE276C_Final_Research_Paper.pdf" width="100%" height="1000" type="application/pdf"></object>
