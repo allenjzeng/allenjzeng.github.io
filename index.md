@@ -23,7 +23,7 @@ On the top of the screen, you can search for specific projects or topics using t
 On the sidebar over on the left, you'll see various links including my resume, work experience, and school portfolio. Just by the nature industry work, there are fewer catchy visualizations there as compared to my projects from UC San Diego and Berkeley.
 
 - [Resume](/resume/) contains a long-form webpage resume, as well as the short-form PDF resume that you might already be familiar with.
-- [Professional Work](/work/) describes various projects that I've contributed and led at Toyon Research.
+- [Toyon Research Corp](/work/) describes (in plain text) various projects that I've contributed to and led at Toyon.
 - [Grad Projects](/ucsd/) contains a list of projects that I've worked on while at UC San Diego.
 - [Undergrad Projects](/berkeley/) contains a list of projects that I've worked on while at UC Berkeley.
 - [Presentations](/presentations/) contains the slides for various presentations that I've given, as a startup pitch, tutorial/workshop, etc. that do not necessarily fall into the above categories.
