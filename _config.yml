@@ -98,6 +98,8 @@ menu:
     url:               /ucsd/
   - title:             Undergrad Projects
     url:               /berkeley/
+  - title:             Misc. Projects (NEW!)
+    url:               /projects/
   - title:             Presentations
     url:               /presentations/
 
@@ -223,6 +225,12 @@ defaults:
 
   - scope:
       type:            berkeley
+    values:
+      seo:
+        type:          WebPage
+
+  - scope:
+      type:            projects
     values:
       seo:
         type:          WebPage
@@ -373,10 +381,6 @@ collections:
     permalink:         /tag-:name/
     output:            true
 
-  # projects:
-  #   permalink:         /projects/:path/
-  #   output:            true
-
   work:
     permalink:         /work/:path/
     output:            true
@@ -391,6 +395,10 @@ collections:
 
   berkeley:
     permalink:         /berkeley/:path/
+    output:            true
+
+  projects:
+    permalink:         /projects/:path/
     output:            true
 
   presentations:

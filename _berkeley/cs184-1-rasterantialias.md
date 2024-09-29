@@ -68,7 +68,7 @@ Sampling-based rasterization of example triangles
 
 
 ## Part 3: Antialiasing triangles
-I created a new buffer that is sample_rate $\times$ the size of _framebuffer_, called the _superbuffer_. At first, I tried implementing supersampling by going subpixel sample line-by-line - which turned out to be a bad idea because it made calculating the indices of each sample in _superbuffer_ incredibly difficult and buggy. Then I decided to store samples in _superbuffer_ on a per-pixel basis. For example, if the supersampling rate is at 16, all 16 of that pixel's samples would be taken consecutively and stored consecutively with _superbuffer_. This resolved all of my bugs arising from indexing errors and stopped the seg-faults. In `resolve()`, for each pixel, I added all sample_rate samples RGBA values together respectively and then took an naive average; and then put that rounded value into the corresponding pixel in _framebuffer_. (Sum of sample_rate values in a color channel divided by sample_rate.) Also, I changed rasterize_point and rasterize_line to write to the _superbuffer_ instead of to the _framebuffer_ directly.
+I created a new buffer that is sample_rate $$\times$$ the size of _framebuffer_, called the _superbuffer_. At first, I tried implementing supersampling by going subpixel sample line-by-line - which turned out to be a bad idea because it made calculating the indices of each sample in _superbuffer_ incredibly difficult and buggy. Then I decided to store samples in _superbuffer_ on a per-pixel basis. For example, if the supersampling rate is at 16, all 16 of that pixel's samples would be taken consecutively and stored consecutively with _superbuffer_. This resolved all of my bugs arising from indexing errors and stopped the seg-faults. In `resolve()`, for each pixel, I added all sample_rate samples RGBA values together respectively and then took an naive average; and then put that rounded value into the corresponding pixel in _framebuffer_. (Sum of sample_rate values in a color channel divided by sample_rate.) Also, I changed rasterize_point and rasterize_line to write to the _superbuffer_ instead of to the _framebuffer_ directly.
 
 
 ![part3-bug.webp](/assets/webp/cs184/1/part3-bug.webp){:.lead width="960" height="640" loading="lazy"}
@@ -113,27 +113,27 @@ I created a new svg of a colored arrow head. It has a group of colortri's which 
 
 
 ![part4-0.webp](/assets/webp/cs184/1/part4-0.webp){:.lead width="960" height="640" loading="lazy"}
-The original image grouping $G$.
+The original image grouping $$G$$.
 {:.figcaption}
 
 
 ![part4-1.webp](/assets/webp/cs184/1/part4-1.webp){:.lead width="960" height="640" loading="lazy"}
-$G' = rotate(45,250,320) \times G$
+$$G' = rotate(45,250,320) \times G$$
 {:.figcaption}
 
 
 ![part4-2.webp](/assets/webp/cs184/1/part4-2.webp){:.lead width="960" height="640" loading="lazy"}
-$G'' = scale(0.5,0.5) \times G'$
+$$G'' = scale(0.5,0.5) \times G'$$
 {:.figcaption}
 
 
 ![part4-3.webp](/assets/webp/cs184/1/part4-3.webp){:.lead width="960" height="640" loading="lazy"}
-$G^{(3)} = translate(100,200) \times G''$
+$$G^{(3)} = translate(100,200) \times G''$$
 {:.figcaption}
 
 
 ![part4-4.webp](/assets/webp/cs184/1/part4-4.webp){:.lead width="960" height="640" loading="lazy"}
-$G^{(4)} = rotate(-120,240,320) \times G^{(3)}$
+$$G^{(4)} = rotate(-120,240,320) \times G^{(3)}$$
 {:.figcaption}
 
 
@@ -204,7 +204,7 @@ Bilinear - There is not much difference between nearest pixel and bilinear at th
 
 
 ## Part 7: Level sampling with mipmaps for texture mapping
-In implementing level sampling with mipmaps, I modified DrawRend to also pass in the barycentric coordinates of adjacent x-and y-sampling coordinates of the sampling point into `tri->color(...)`. To optimize the `DrawRend::rasterize_triangle(...)`, I only calculate and pass in those adjacent coordinates if level sampling is on. In svg.cpp, I modified `TexTri::color(...)` to calculate du and dv for _SampleParams_. To do that, first I interpolate the given per-vertex uv coordinates of the triangle with the barycentric coordinates of the newly passed in adjacent sampling locations. Then, I respectively subtract those interpolated values with the interpolated values of the base sampling location, in order to obtain the $\partial u/\partial x, \partial v/\partial x, \partial u/\partial y$, and $\partial v/\partial y$ required for computing mipmapping levels.
+In implementing level sampling with mipmaps, I modified DrawRend to also pass in the barycentric coordinates of adjacent x-and y-sampling coordinates of the sampling point into `tri->color(...)`. To optimize the `DrawRend::rasterize_triangle(...)`, I only calculate and pass in those adjacent coordinates if level sampling is on. In svg.cpp, I modified `TexTri::color(...)` to calculate du and dv for _SampleParams_. To do that, first I interpolate the given per-vertex uv coordinates of the triangle with the barycentric coordinates of the newly passed in adjacent sampling locations. Then, I respectively subtract those interpolated values with the interpolated values of the base sampling location, in order to obtain the $$\partial u/\partial x, \partial v/\partial x, \partial u/\partial y$$, and $$\partial v/\partial y$$ required for computing mipmapping levels.
 
 Then in texture.cpp, I implement the `Texture::get_level(...)` according to the formula provided in class. When trilinear filtering was selected (`L_LINEAR`), `Texture::sample(...)` calculates the texel value at two separate mipmap level and then interpolates between them using a weighted sum to obtain and return the filtered sample color. I optimized the level sampling methods to calculate the values for that lsm-option only when necessary. For example, only when `sp.lsm == L_LINEAR` do I call the sampling methods again on a higher level. Redundant calculations were factored out as well, including the square root used in obtaining the level values.
 
